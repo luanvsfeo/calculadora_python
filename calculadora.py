@@ -52,13 +52,15 @@ def verifica_operacao(numero_operacao):
 try:
     print('Bem vindo a calculadora em python')
     opcoes()
-    op = int(input('Informe o numero da operação que deseja realizar : '))
-    if verifica_operacao(op):
-        n1 = float(input('numero : '))
-        n2 = float(input('numero : '))
-        print('resultado da operacao {} '.format(operacoes(op,n1,n2)))
-    else:
-        print('opcao invalida')
+    op = -1
+    while(op!=0):
+        op = int(input('Informe o numero da operação que deseja realizar : '))
+        if verifica_operacao(op):
+            n1 = float(input('numero : '))
+            n2 = float(input('numero : '))
+            print('resultado da operacao {} '.format(operacoes(op,n1,n2)))
+        else:
+            print('opcao invalida')
 except:
     print('por favor entre apenas com numeros inteiros')
     
